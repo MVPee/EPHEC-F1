@@ -20,5 +20,6 @@ typedef struct{
 struct s_f1 *create_f1(int ac, int *list);
 void	show_f1(struct s_f1 *f1);
 void modifyTime(struct s_f1 *f1, int index, int newTime);
+int random_int(int min, int max);
 
 #endif
