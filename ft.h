@@ -8,7 +8,7 @@
 
 typedef struct s_f1{
     int numero;
-    int time;
+    int time[50];
     int best;
 } t_f1;
 

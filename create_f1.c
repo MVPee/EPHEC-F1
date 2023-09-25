@@ -10,7 +10,7 @@ struct s_f1 *create_f1(int ac, int *list)
     while(i < ac)
     {
         arr[i].numero = list[i];
-        arr[i].time = 0;
+        bzero(arr[i].time, sizeof(arr[i].time));
         arr[i].best = 0;
         i++; 
     }
