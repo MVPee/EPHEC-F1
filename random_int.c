@@ -1,6 +1,6 @@
 #include "ft.h"
 
-int random_int(int min, int max)
+int	random_int(int min, int max)
 {
-   return min + rand() % (max - min);
+	return (min + rand() % (max - min));
 }
