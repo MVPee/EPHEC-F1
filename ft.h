@@ -9,7 +9,7 @@
 typedef struct s_f1{
     int numero;
     int time;
-    int best_time;
+    int best;
 } t_f1;
 
 typedef struct{

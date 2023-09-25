@@ -11,7 +11,7 @@ struct s_f1 *create_f1(int ac, int *list)
     {
         arr[i].numero = list[i];
         arr[i].time = 0;
-        arr[i].best_time = 0;
+        arr[i].best = 0;
         i++; 
     }
     return (arr);
