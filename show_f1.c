@@ -5,14 +5,20 @@ void	show_f1(struct s_f1 *f1)
 	int i;
 
 	i = 0;
-	printf("\n");
 	while (f1[i].numero)
 	{
-		printf("Numéro : %d\t | Time : %d\t | Best : %d\t\t\t", f1[i].numero,
-			f1[i].time[0], f1[i].best);
-		printf("Numéro : %d\t | Time : %d\t | Best : %d\n", f1[i + 1].numero,
-			f1[i + 1].time[0], f1[i + 1].best);
-		i += 2;
+		if(f1[i].sector == 0 && f1[i].laps == 0)
+			f1[i].best = f1[i].ctime;
+		f1[i].sector++;
+		if(f1[i].sector == 4)
+		{
+			f1[i].sector = 1;
+			f1[i].laps++;
+		}
+		f1[i].time += f1[i].ctime;
+		if(f1[i].ctime < f1[i].best)
+			f1[i].best = f1[i].ctime;
+		printf("N° : %d\t| Time : %ds\t| Time (Sector): %ds\t| Best : %ds\t| Laps : %d\t| Sector : %d\n", f1[i].numero, f1[i].time, f1[i].ctime, f1[i].best, f1[i].laps, f1[i].sector);
+		i++;
 	}
-	printf("\n-------------------------------------------------------------------------------------------------------------\n");
 }

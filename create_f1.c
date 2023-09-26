@@ -10,8 +10,11 @@ struct s_f1 *create_f1(int ac, int *list)
     while(i < ac)
     {
         arr[i].numero = list[i];
-        bzero(arr[i].time, sizeof(arr[i].time));
+        arr[i].ctime = 0;
+        arr[i].time = 0;
         arr[i].best = 0;
+        arr[i].laps = 0;
+        arr[i].sector = 0;
         i++; 
     }
     return (arr);

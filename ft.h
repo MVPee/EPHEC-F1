@@ -5,11 +5,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 typedef struct s_f1{
     int numero;
-    int time[50];
+    int ctime;
+    int time;
     int best;
+    int laps;
+    int sector;
 } t_f1;
 
 typedef struct{
