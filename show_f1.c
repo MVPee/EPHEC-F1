@@ -18,7 +18,7 @@ void	show_f1(struct s_f1 *f1)
 		f1[i].time += f1[i].ctime;
 		if(f1[i].ctime < f1[i].best)
 			f1[i].best = f1[i].ctime;
-		printf("N° : %d\t| Time : %ds\t| Time (Sector): %ds\t| Best : %ds\t| Laps : %d\t| Sector : %d\n", f1[i].numero, f1[i].time, f1[i].ctime, f1[i].best, f1[i].laps, f1[i].sector);
+		printf("N° : %d\t| Time : %ds\t| Time (Sector): %ds\t| Best : %ds\t| Laps : %d(S%d)\n", f1[i].numero, f1[i].time, f1[i].ctime, f1[i].best, f1[i].laps, f1[i].sector);
 		i++;
 	}
 }
