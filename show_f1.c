@@ -8,6 +8,7 @@ void	show_f1(struct s_f1 *f1, int size)
 	qsort(f1, size, sizeof(struct s_f1), cmp_time);
 
 	i = 0;
+	printf("      ╔═════════╦═══════════════╦═══════════════════════╦═══════════════╦══════════════╗\n");
 	while (f1[i].numero)
 	{
 		if(f1[i].completed == false)
@@ -17,25 +18,26 @@ void	show_f1(struct s_f1 *f1, int size)
 		if(allCarComplete(f1, size))
 		{
 			if(i == 0)
-				printf("1\tN° : %d\t| Time : %d.%dm\t| Time (Sector): -\t| Best : %ds\t| Laps : %d (S%d)\n", f1[i].numero, minutes, seconds, f1[i].best, f1[i].laps, f1[i].sector);
+				printf("1\tN°: %d\t║ Time: %d.%dm\t║ Time (Sector): --\t║ Best: %ds\t║ Laps: %d (S%d)\n", f1[i].numero, minutes, seconds, f1[i].best, f1[i].laps, f1[i].sector);
 			else if(i == 1)
-				printf("2\tN° : %d\t| Time : %d.%dm\t| Time (Sector): -\t| Best : %ds\t| Laps : %d (S%d)\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
+				printf("2\tN°: %d\t║ Time: %d.%dm\t║ Time (Sector): --\t║ Best: %ds\t║ Laps: %d (S%d)\t\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
 			else if(i == 2)
-				printf("3\tN° : %d\t| Time : %d.%dm\t| Time (Sector): -\t| Best : %ds\t| Laps : %d (S%d)\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
+				printf("3\tN°: %d\t║ Time: %d.%dm\t║ Time (Sector): --\t║ Best: %ds\t║ Laps: %d (S%d)\t\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
 			else
-				printf("\tN° : %d\t| Time : %d.%dm\t| Time (Sector): -\t| Best : %ds\t| Laps : %d (S%d)\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
+				printf("\tN°: %d\t║ Time: %d.%dm\t║ Time (Sector): --\t║ Best: %ds\t║ Laps: %d (S%d)\t\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
 		}
 		else
 		{
 			if(i == 0)
-				printf("1\tN° : %d\t| Time : %d.%dm\t| Time (Sector): %ds\t| Best : %ds\t| Laps : %d (S%d)\n", f1[i].numero, minutes, seconds, f1[i].ctime, f1[i].best, f1[i].laps, f1[i].sector);
+				printf("1\tN°: %d\t║ Time: %d.%dm\t║ Time (Sector): %ds\t║ Best: %ds\t║ Laps: %d (S%d)\n", f1[i].numero, minutes, seconds, f1[i].ctime, f1[i].best, f1[i].laps, f1[i].sector);
 			else if(i == 1)
-				printf("2\tN° : %d\t| Time : %d.%dm\t| Time (Sector): %ds\t| Best : %ds\t| Laps : %d (S%d)\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].ctime, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
+				printf("2\tN°: %d\t║ Time: %d.%dm\t║ Time (Sector): %ds\t║ Best: %ds\t║ Laps: %d (S%d)\t\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].ctime, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
 			else if(i == 2)
-				printf("3\tN° : %d\t| Time : %d.%dm\t| Time (Sector): %ds\t| Best : %ds\t| Laps : %d (S%d)\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].ctime, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
+				printf("3\tN°: %d\t║ Time: %d.%dm\t║ Time (Sector): %ds\t║ Best: %ds\t║ Laps: %d (S%d)\t\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].ctime, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
 			else
-				printf("\tN° : %d\t| Time : %d.%dm\t| Time (Sector): %ds\t| Best : %ds\t| Laps : %d (S%d)\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].ctime, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
+				printf("\tN°: %d\t║ Time: %d.%dm\t║ Time (Sector): %ds\t║ Best: %ds\t║ Laps: %d (S%d)\t\t-%d.00s\n", f1[i].numero, minutes, seconds, f1[i].ctime, f1[i].best, f1[i].laps, f1[i].sector, f1[i].diff);
 		}
 		i++;
 	}
+	printf("      ╚═════════╩═══════════════╩═══════════════════════╩═══════════════╩══════════════╝\n");
 }
