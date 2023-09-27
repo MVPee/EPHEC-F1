@@ -15,6 +15,8 @@ struct s_f1 *create_f1(int ac, int *list)
         arr[i].best = 0;
         arr[i].laps = 0;
         arr[i].sector = 0;
+        arr[i].diff = 0;
+        arr[i].completed = false;
         i++; 
     }
     return (arr);
