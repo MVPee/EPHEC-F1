@@ -1,4 +1,4 @@
-#include "ft.h"
+#include "../includes/ft.h"
 
 struct s_f1 *create_f1(int ac, int *list)
 {

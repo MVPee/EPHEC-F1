@@ -1,4 +1,4 @@
-#include "ft.h"
+#include "../includes/ft.h"
 
 bool do_sector(t_f1 *f1Array, int size)
 {
@@ -13,7 +13,7 @@ bool do_sector(t_f1 *f1Array, int size)
 	return finish;
 }
 
-int main(int ac, char **av)
+int main(void)
 {
     t_f1 *f1Array;
     int list[] = {1, 2, 3, 4, 10, 11, 14, 16, 18, 20, 22, 23, 24, 27, 31, 44,

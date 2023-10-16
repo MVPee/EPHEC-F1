@@ -1,4 +1,4 @@
-#include "ft.h"
+#include "../includes/ft.h"
 
 int cmp_time(const void *a, const void *b)
 {

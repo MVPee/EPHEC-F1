@@ -1,4 +1,4 @@
-#include "ft.h"
+#include "../includes/ft.h"
 
 bool allCarComplete(struct s_f1 *f1, int size)
 {

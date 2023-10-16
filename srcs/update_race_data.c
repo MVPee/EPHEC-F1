@@ -1,4 +1,4 @@
-#include "ft.h"
+#include "../includes/ft.h"
 
 void updateRaceData(struct s_f1 *f1)
 {

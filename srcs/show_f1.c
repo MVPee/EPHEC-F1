@@ -1,9 +1,8 @@
-#include "ft.h"
+#include "../includes/ft.h"
 
 void	show_f1(struct s_f1 *f1, int size)
 {
 	int i;
-	struct s_f1 previousCar;
 
 	qsort(f1, size, sizeof(struct s_f1), cmp_time);
 

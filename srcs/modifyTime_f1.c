@@ -1,4 +1,4 @@
-#include "ft.h"
+#include "../includes/ft.h"
 
 void	modifyTime(struct s_f1 *f1, int index, int newTime)
 {
